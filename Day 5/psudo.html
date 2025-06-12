@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CSS Examples</title>
+    <style>
+        /* Pseudo-elements example */
+        .check-item::before {
+            content: "✓ ";
+            color: green;
+        }
+        
+        /* First letter styling */
+        .big-first-letter::first-letter {
+            font-size: 30px;
+            color: red;
+        }
+        
+        /* Box with shadow */
+        .shadow-box {
+            width: 200px;
+            padding: 20px;
+            background: white;
+            box-shadow: 5px 5px 10px #ccc;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="check-item">Pseudo-element example</div>
+    
+    <p class="big-first-letter">Styled first letter.</p>
+    
+    <div class="shadow-box">
+        Box with shadow effect
+    </div>
+</body>
+</html>
