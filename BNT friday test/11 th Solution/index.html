@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      width: 100%;
+      background-color: #fff;
+      padding: 20px;
+      font-size: 14px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .image-section {
+      display: none;
+    }
+
+    /* ≥ 600px styles */
+    @media (min-width: 600px) {
+      .card {
+        width: 80%;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* ≥ 900px styles */
+    @media (min-width: 900px) {
+      .card {
+        display: flex;
+        width: 70%;
+        font-size: 18px;
+        border-radius: 10px;
+        text-align: left;
+      }
+
+      .image-section {
+        display: block;
+        flex: 1;
+        background: url('https://via.placeholder.com/150') no-repeat center center;
+        background-size: cover;
+        border-radius: 10px 0 0 10px;
+      }
+
+      .content-section {
+        flex: 2;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="image-section"></div>
+    <div class="content-section">
+      <h2>Responsive Card</h2>
+      <p>This card adjusts its layout and style based on screen size using media queries. Try resizing your browser window to see the changes.</p>
+    </div>
+  </div>
+</body>
+</html>

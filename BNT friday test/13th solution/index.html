@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Section Headings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 0 20px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      position: sticky;
+      top: 0;
+      background-color: #f9f9f9;
+      padding: 15px;
+      margin: 0;
+      font-size: 22px;
+      border-bottom: 2px solid #ddd;
+      z-index: 10;
+    }
+
+    .content {
+      padding: 10px 0;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Section 1: Introduction</h2>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id turpis vel elit gravida dictum.</p>
+      <p>Morbi vehicula magna sed dignissim dapibus. Pellentesque in libero et quam facilisis laoreet.</p>
+      <p>Aliquam erat volutpat. Suspendisse potenti. Nulla facilisi.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Section 2: Features</h2>
+    <div class="content">
+      <p>Vivamus vehicula diam at sem fermentum, vitae lobortis lorem gravida.</p>
+      <p>Curabitur tristique neque a orci finibus, vitae tincidunt elit scelerisque.</p>
+      <p>Donec sed arcu at magna tincidunt congue at ac est.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Section 3: Conclusion</h2>
+    <div class="content">
+      <p>Fusce et leo dapibus, accumsan lorem sed, facilisis massa.</p>
+      <p>Sed eu velit ut velit suscipit volutpat ac ut leo.</p>
+      <p>Integer posuere orci eget fermentum suscipit. Quisque vel sem id dolor feugiat lacinia.</p>
+    </div>
+  </section>
+
+</body>
+</html>
