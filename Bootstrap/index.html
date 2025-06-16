@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Cars_Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .hero {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+        text-align: center;
+      }
+      .footer {
+        background-color: #343a40;
+        color: white;
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+<!-- Projects Section -->
+<section id="projects" class="container my-5">
+  <h2 class="text-center mb-4">ALL FAV. CARS HERE!</h2>
+  <div class="d-flex flex-wrap justify-content-center projects-container">
+    
+    <!-- Card 1 -->
+    <div class="project-card">
+      <div class="card h-100">
+        <img src="https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?cs=srgb&dl=car-vehicle-luxury-116675.jpg&fm=jpg" class="card-img-top" alt="Project 1">
+        <div class="card-body">
+          <h5 class="card-title">Range Rover</h5>
+          <p class="card-text">Combines luxury and rugged performance with advanced off-road capability, air suspension, and premium interiors. Features cutting-edge tech like Pivi Pro infotainment and adaptive cruise control.</p>
+          <a href="#" class="btn btn-outline-primary">View</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repeat for Cards 2–6 -->
+    <div class="project-card">
+      <div class="card h-100">
+        <img src="https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?cs=srgb&dl=pexels-mike-b-244206.jpg&fm=jpg" class="card-img-top" alt="Project 2">
+        <div class="card-body">
+          <h5 class="card-title">Audi</h5>
+          <p class="card-text">Sleek design meets engineering precision with Quattro all-wheel drive, turbo engines, and virtual cockpit. Offers a balance of luxury, sportiness, and advanced tech.</p>
+          <a href="#" class="btn btn-outline-primary">View</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="project-card">
+      <div class="card h-100">
+        <img src="https://th.bing.com/th/id/OIP.1l-FU23m2T2vfpB6ejA8gAHaEK?r=0&rs=1&pid=ImgDetMain&cb=idpwebp1&o=7&rm=3" class="card-img-top" alt="Project 3">
+        <div class="card-body">
+          <h5 class="card-title">Bugatti</h5>
+          <p class="card-text"> Bugatti is a pinnacle of hypercar engineering, featuring quad-turbocharged W16 engines, unmatched speed (over 400 km/h), and luxurious craftsmanship.</p>
+          <a href="#" class="btn btn-outline-primary">View</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="project-card">
+      <div class="card h-100">
+        <img src="https://th.bing.com/th/id/OIP.bpFuC4XH-2aCoVllsMxh9QHaDu?r=0&rs=1&pid=ImgDetMain&cb=idpwebp1&o=7&rm=3" class="card-img-top" alt="Project 4">
+        <div class="card-body">
+          <h5 class="card-title">Mercedes-Benz</h5>
+          <p class="card-text"> Blends elegance and innovation with MBUX infotainment, powerful engines, and top-tier comfort. Includes a wide range from luxury sedans to high-performance AMG models.</p>
+          <a href="#" class="btn btn-outline-primary">View</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="project-card">
+      <div class="card h-100">
+        <img src="https://cdn.squaremile.com/featured_image_2x/60f9bf0a1bca0.jpeg" class="card-img-top" alt="Project 5">
+        <div class="card-body">
+          <h5 class="card-title">Rolls-Royce</h5>
+          <p class="card-text">Embodies ultimate luxury with hand-crafted interiors, V12 engines, and serene driving. Models like Phantom and Ghost offer a majestic, ultra-refined experience.</p>
+          <a href="#" class="btn btn-outline-primary">View</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="project-card">
+      <div class="card h-100">
+        <img src="https://wallup.net/wp-content/uploads/2019/09/841798-lamborghini-aventador-super-veloce-cars-supercars-red.jpg" class="card-img-top" alt="Project 6">
+        <div class="card-body">
+          <h5 class="card-title">Lamborghini</h5>
+          <p class="card-text"> Delivers extreme performance with V10/V12 engines, bold styling, and razor-sharp aerodynamics. Supercars like Huracán and Aventador embody Italian speed and flair.</p>
+          <a href="#" class="btn btn-outline-primary">View</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<style>
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Space between cards */
+    justify-content: center;
+  }
+
+  .project-card {
+    box-sizing: border-box;
+  }
+
+  /* 1 per row (mobile) */
+  .project-card {
+    width: 100%;
+  }
+
+  @media (min-width: 576px) {
+    .project-card {
+      width: calc(50% - 8px); 
+    }
+  }
+
+  @media (min-width: 768px) {
+    .project-card {
+      width: calc(33.33% - 10.66px); 
+    }
+  }
+
+  @media (min-width: 992px) {
+    .project-card {
+      width: calc(25% - 12px); 
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .project-card {
+      width: calc(20% - 12.8px); 
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .project-card {
+      width: calc(16.66% - 13.33px); 
+    }
+  }
+</style>
