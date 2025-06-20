@@ -30,15 +30,12 @@
     <script>
         function checkValue() {
             const input = document.getElementById("userInput").value;
-
-            // Evaluate input as JavaScript would
             let evaluated;
 
             try {
-                // Use eval to treat the input as JS value (with safety consideration in mind)
                 evaluated = eval(input);
             } catch {
-                evaluated = input; // fallback to string if eval fails
+                evaluated = input; 
             }
 
             const isTruthy = Boolean(evaluated);
