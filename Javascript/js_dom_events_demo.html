@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript DOM Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #eventBox {
+            width: 250px;
+            height: 100px;
+            background-color: #87CEFA;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 20px;
+            border: 2px solid #4682B4;
+        }
+        input, select, button {
+            padding: 8px;
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript DOM Events Practice</h2>
+
+    <div id="eventBox">Hover / Click / Double Click</div>
+
+    <button id="clickBtn">Click Me</button>
+    <button id="dblBtn">Double Click Me</button>
+
+    <input type="text" id="textInput" placeholder="Try typing, focus, blur, etc.">
+    
+    <select id="dropdown">
+        <option value="">-- Select Fruit --</option>
+        <option value="Apple">Apple</option>
+        <option value="Mango">Mango</option>
+        <option value="Banana">Banana</option>
+    </select>
+
+    <div id="log" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <script>
+        // Get elements
+        const clickBtn = document.getElementById("clickBtn");
+        const dblBtn = document.getElementById("dblBtn");
+        const eventBox = document.getElementById("eventBox");
+        const textInput = document.getElementById("textInput");
+        const dropdown = document.getElementById("dropdown");
+        const log = document.getElementById("log");
+
+        // onclick
+        clickBtn.onclick = function () {
+            log.innerText = "Button clicked!";
+        };
+
+        // ondblclick
+        dblBtn.ondblclick = function () {
+            log.innerText = "Button double-clicked!";
+        };
+
+        // onmouseout
+        eventBox.onmouseout = function () {
+            log.innerText = "Mouse left the box!";
+        };
+
+        // onfocus
+        textInput.onfocus = function () {
+            log.innerText = "Input field focused";
+        };
+
+        // onblur
+        textInput.onblur = function () {
+            log.innerText = "Input field lost focus";
+        };
+
+        // onchange
+        dropdown.onchange = function () {
+            log.innerText = "Dropdown changed to: " + dropdown.value;
+        };
+
+        // onkeydown
+        textInput.onkeydown = function () {
+            log.innerText = "Key pressed in input field";
+        };
+
+        // oninput
+        textInput.oninput = function () {
+            log.innerText = "Input value: " + textInput.value;
+        };
+    </script>
+
+</body>
+</html>

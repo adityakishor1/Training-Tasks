@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Events with Alerts and Console Log</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 20px;
+            border: 2px solid #007BFF;
+        }
+        input, select, button {
+            padding: 8px;
+            margin: 10px 0;
+            display: block;
+        }
+    </style>
+
+    <!-- ✅ jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h2>jQuery Events with Alerts and Console</h2>
+
+    <div id="box">Hover or Click Me</div>
+
+    <button id="clickBtn">Click Me</button>
+    <button id="dblBtn">Double Click Me</button>
+
+    <input type="text" id="textInput" placeholder="Type something here...">
+    
+    <select id="dropdown">
+        <option value="">-- Choose --</option>
+        <option value="Apple">Apple</option>
+        <option value="Banana">Banana</option>
+    </select>
+
+    <div id="output" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <script>
+        $(document).ready(function () {
+
+            // CLICK event
+            $("#clickBtn").click(function () {
+                alert("Button Clicked!");
+                $("#output").text("Button Clicked!");
+            });
+
+            // DOUBLE CLICK
+            $("#dblBtn").dblclick(function () {
+                alert("Button Double-Clicked!");
+                $("#output").text("Button Double-Clicked!");
+            });
+
+            // MOUSEOVER
+            $("#box").mouseover(function () {
+                alert("Mouse Over Box");
+                $("#box").css("background-color", "lightgreen").text("Mouse Over");
+                $("#output").text("Mouse is over the box");
+            });
+
+            // MOUSEOUT
+            $("#box").mouseout(function () {
+                alert("Mouse Out of Box");
+                $("#box").css("background-color", "lightblue").text("Hover or Click Me");
+                $("#output").text("Mouse left the box");
+            });
+
+            // FOCUS — alert removed, console added
+            $("#textInput").focus(function () {
+                console.log("Input field focused");
+                $("#output").text("Input field focused");
+            });
+
+            // BLUR
+            $("#textInput").blur(function () {
+                alert("Input Field Lost Focus");
+                $("#output").text("Input field lost focus");
+            });
+
+            // KEYDOWN
+            $("#textInput").keydown(function () {
+                alert("Key Pressed in Input");
+                $("#output").text("Key is being pressed");
+            });
+
+            // CHANGE (for select dropdown)
+            $("#dropdown").change(function () {
+                const value = $(this).val();
+                alert("Dropdown Changed to: " + value);
+                $("#output").text("You selected: " + value);
+            });
+
+        });
+    </script>
+
+</body>
+</html>

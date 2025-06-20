@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Truthy or Falsy Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            padding: 8px;
+            margin-top: 10px;
+        }
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Truthy or Falsy Value Checker</h2>
+    <label for="userInput">Enter a value:</label>
+    <input type="text" id="userInput" placeholder='Try: 0, "", "0", null, []'>
+    <br>
+    <button onclick="checkValue()">Check</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkValue() {
+            const input = document.getElementById("userInput").value;
+
+            // Evaluate input as JavaScript would
+            let evaluated;
+
+            try {
+                // Use eval to treat the input as JS value (with safety consideration in mind)
+                evaluated = eval(input);
+            } catch {
+                evaluated = input; // fallback to string if eval fails
+            }
+
+            const isTruthy = Boolean(evaluated);
+
+            document.getElementById("result").innerHTML = 
+                `Input: <code>${input}</code> is <strong>${isTruthy ? "Truthy" : "Falsy"}</strong> <br>
+                Evaluated Value: <code>${JSON.stringify(evaluated)}</code>`;
+        }
+    </script>
+
+</body>
+</html>
