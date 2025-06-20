@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Task 1 - Modified</title>
+</head>
+<body>
+  <script>
+    // 1. typeof for datatypes
+    let city = "Delhi";
+    let marks = 88;
+    console.log(typeof city); 
+    console.log(typeof marks); 
+
+    // 2. Merge (+) string & number
+    let status = "Score: " + 100;
+    console.log(status); 
+
+    // 3. charAt
+    console.log("Programming".charAt(6)); // m
+
+    // 4. lastIndexOf
+    console.log("javascript rocks".lastIndexOf("s")); // 15
+
+    // 5. Typecasting 
+    let price = "99";
+    let priceNumber = Number(price);
+    console.log(priceNumber + 1); 
+
+    // Code without typecast
+    console.log(price + 1); 
+
+    // 6. NaN example
+    let y = "xyz";
+    let output = Number(y); 
+    console.log(output); 
+
+    // 7. isInteger
+    console.log(Number.isInteger(5));   
+    console.log(Number.isInteger(3.14)); 
+
+    // 8. parseInt, parseFloat
+    console.log(parseInt("456abc")); 
+    console.log(parseFloat("78.90xyz")); 
+
+    // 9. Print after decimal (to 2 fixed numbers)
+    let pi = 3.14159;
+    console.log(pi.toFixed(2)); 
+
+    // 10. switch example
+    let day = "Monday";
+    switch (day) {
+      case "Sunday":
+        console.log("It's Sunday!");
+        break;
+      case "Monday":
+        console.log("Start of the week");
+        break;
+      default:
+        console.log("Some other day");
+    }
+
+    // 11. var, let, const
+    var x1 = "var variable";
+    let x2 = "let variable";
+    const x3 = "const variable";
+    console.log(x1, x2, x3); 
+
+    // Global example
+    var site = "openai.com";
+    function showSite() {
+      console.log(site);
+    }
+    showSite();
+
+    // 12. shift, unshift, push, pop
+    let colors = ["red", "green", "blue"];
+    colors.push("yellow");     
+    colors.pop();              
+    colors.shift();            
+    colors.unshift("purple");  
+    console.log(colors);
+
+    // Delete element in array
+    delete colors[1]; 
+    console.log(colors);
+
+    // 13. splice
+    let digits = [1, 2, 3, 4, 5];
+    digits.splice(2, 2); 
+    console.log(digits); 
+
+    // Replace using splice
+    digits.splice(1, 1, 99); 
+    console.log(digits); 
+
+    // 14. reverse
+    let letters = ["a", "b", "c"];
+    console.log(letters.reverse()); 
+
+    // 15. Merge 2 arrays (concat)
+    let arr1 = ["apple", "banana"];
+    let arr2 = ["cherry", "date"];
+    let fruits = arr1.concat(arr2);
+    console.log(fruits); 
+  </script>
+</body>
+</html>
