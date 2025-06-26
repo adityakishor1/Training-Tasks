@@ -1,52 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JavaScript Task 1 - Modified</title>
+  <title>JavaScript Task 1 - Rearranged</title>
 </head>
 <body>
   <script>
-    // 1. typeof for datatypes
-    let city = "Delhi";
-    let marks = 88;
-    console.log(typeof city); 
-    console.log(typeof marks); 
-
-    // 2. Merge (+) string & number
-    let status = "Score: " + 100;
-    console.log(status); 
-
-    // 3. charAt
-    console.log("Programming".charAt(6)); // m
-
-    // 4. lastIndexOf
-    console.log("javascript rocks".lastIndexOf("s")); // 15
-
-    // 5. Typecasting 
-    let price = "99";
-    let priceNumber = Number(price);
-    console.log(priceNumber + 1); 
-
-    // Code without typecast
-    console.log(price + 1); 
-
-    // 6. NaN example
-    let y = "xyz";
-    let output = Number(y); 
-    console.log(output); 
-
-    // 7. isInteger
-    console.log(Number.isInteger(5));   
-    console.log(Number.isInteger(3.14)); 
-
-    // 8. parseInt, parseFloat
-    console.log(parseInt("456abc")); 
-    console.log(parseFloat("78.90xyz")); 
-
-    // 9. Print after decimal (to 2 fixed numbers)
-    let pi = 3.14159;
-    console.log(pi.toFixed(2)); 
-
-    // 10. switch example
+    // 1. switch example
     let day = "Monday";
     switch (day) {
       case "Sunday":
@@ -59,7 +18,7 @@
         console.log("Some other day");
     }
 
-    // 11. var, let, const
+    // 2. var, let, const
     var x1 = "var variable";
     let x2 = "let variable";
     const x3 = "const variable";
@@ -72,7 +31,47 @@
     }
     showSite();
 
-    // 12. shift, unshift, push, pop
+    // 3. typeof for datatypes
+    let city = "Delhi";
+    let marks = 88;
+    console.log(typeof city); 
+    console.log(typeof marks); 
+
+    // 4. isInteger
+    console.log(Number.isInteger(5));   
+    console.log(Number.isInteger(3.14)); 
+
+    // 5. Merge (+) string & number
+    let status = "Score: " + 100;
+    console.log(status); 
+
+    // 6. Typecasting   
+    let price = "99";
+    let priceNumber = Number(price);
+    console.log(priceNumber + 1); 
+    // Code without typecast
+    console.log(price + 1); 
+
+    // 7. NaN example
+    let y = "xyz";
+    let output = Number(y); 
+    console.log(output); 
+
+    // 8. parseInt, parseFloat
+    console.log(parseInt("456abc")); 
+    console.log(parseFloat("78.90xyz")); 
+
+    // 9. Print after decimal (to 2 fixed numbers)
+    let pi = 3.14159;
+    console.log(pi.toFixed(2)); 
+
+    // 10. charAt
+    console.log("Programming".charAt(6)); // m
+
+    // 11. lastIndexOf
+    console.log("javascript rocks".lastIndexOf("s")); // 15
+
+    // 12. Array methods: push, pop, shift, unshift
     let colors = ["red", "green", "blue"];
     colors.push("yellow");     
     colors.pop();              

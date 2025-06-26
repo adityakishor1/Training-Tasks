@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Animation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: teal;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="moveBtn">Move Right</button>
+  <div id="box"></div>
+
+  <script>
+    $('#moveBtn').click(function() {
+      $('#box').animate({
+        left: '250px',
+        opacity: 0.5,
+        height: '150px',
+        width: '150px'
+      }, 1000); // 1000ms = 1 second
+    });
+  </script>
+
+</body>
+</html>

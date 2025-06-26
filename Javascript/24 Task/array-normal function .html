@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Function Types</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <button id="btn">Click Me</button>
+
+  <script>
+    // Normal function
+    $('#btn').click(function() {
+      console.log("Clicked using normal function");
+      console.log(this); 
+    });
+
+    // Arrow function
+    $('#btn').click(() => {
+      console.log("Clicked using arrow function");
+      // console.log(this); // 'this' does NOT refer to button
+    });
+  </script>
+
+</body>
+</html>

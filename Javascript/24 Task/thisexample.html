@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Object Example</title>
+</head>
+<body>
+
+  <h2 id="info"></h2>
+  <button onclick="person.sayHello()">Greet</button>
+
+  <script>
+    const person = {
+      firstName: "Aditya",
+      lastName: "Kishor",
+      age: 21,
+      sayHello: function() {
+        const message = `Hello, my name is ${this.firstName} ${this.lastName} and I am ${this.age} years old.`;
+        document.getElementById("info").textContent = message;
+      }
+    };
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Class Manipulation</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+    .red {
+      color: red;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <p id="text">This is a sample paragraph.</p>
+
+  <button onclick="$('#text').addClass('highlight')">Add Highlight</button>
+  <button onclick="$('#text').removeClass('highlight')">Remove Highlight</button>
+  <button onclick="$('#text').toggleClass('red')">Toggle Red</button>
+
+</body>
+</html>

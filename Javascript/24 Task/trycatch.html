@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>try-catch-finally Example</title>
+</head>
+<body>
+
+  <h2>Check the result below:</h2>
+  <p id="result"></p>
+
+  <script>
+    const resultElement = document.getElementById("result");
+
+    function divide(a, b) {
+      try {
+        // Try block: risky code
+        if (b === 0) {
+          throw new Error("Cannot divide by zero!");
+        }
+        const result = a / b;
+        resultElement.textContent = `Result: ${result}`;
+      } catch (error) {
+        // Catch block: handles error
+        resultElement.textContent = `Error: ${error.message}`;
+      } finally {
+        // Finally block: always runs
+        console.log("Division attempted."); 
+      }
+    }
+
+    divide(10, 0); 
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery HTML Manipulation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div id="box">
+    <p>This is <strong>original</strong> content.</p>
+  </div>
+
+  <br>
+  <button id="changeHtml">Change HTML</button>
+
+  <script>
+    $('#changeHtml').click(function() {
+      $('#box').html('<h3>✨ This is <em>new</em> HTML content!</h3>');
+    });
+  </script>
+
+</body>
+</html>

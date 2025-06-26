@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Stopwatch</title>
+</head>
+<body>
+
+  <h1 id="display">0</h1>
+
+  <button onclick="start()">Start</button>
+  <button onclick="pause()">Pause</button>
+  <button onclick="reset()">Reset</button>
+
+  <script>
+    let count = 0;
+    let timer = null;
+
+    function start() {
+      if (timer === null) {
+        timer = setInterval(() => {
+          count++;
+          document.getElementById("display").textContent = count;
+        }, 1000);
+      }
+    }
+
+    function pause() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    function reset() {
+      clearInterval(timer);
+      timer = null;
+      count = 0;
+      document.getElementById("display").textContent = count;
+    }
+  </script>
+
+</body>
+</html>

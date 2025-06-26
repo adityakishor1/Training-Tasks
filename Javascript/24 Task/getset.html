@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Get & Set</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h2 id="heading">Hello, World!</h2>
+  <input type="text" id="nameInput" value="Aditya">
+  <br><br>
+  <button id="getBtn">Get Value</button>
+  <button id="setBtn">Set Value</button>
+
+  <p id="output"></p>
+
+  <script>
+    // When "Get Value" is clicked
+    $('#getBtn').click(function() {
+      const value = $('#nameInput').val(); 
+      $('#output').text("You entered: " + value);  
+    });
+
+    // When "Set Value" is clicked
+    $('#setBtn').click(function() {
+      $('#nameInput').val("Kishor");  
+      $('#heading').text("Welcome, Kishor!"); 
+    });
+  </script>
+
+</body>
+</html>

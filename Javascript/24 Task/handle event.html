@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Events Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #output {
+      padding: 10px;
+      border: 1px solid gray;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="clickBtn"> Click Me</button>
+  <p id="output">Hover over me or click the button</p>
+
+  <script>
+    
+    $('#clickBtn').click(function() {
+      $('#output').text("✅ Button clicked!");
+    });
+
+    
+    $('#output').mouseover(function() {
+      $(this).css("background-color", "#ffffcc");
+      $(this).text("You hovered over me!");
+    });
+
+  
+    $('#output').mouseout(function() {
+      $(this).css("background-color", "");
+      $(this).text("Hover over me or click the button");
+    });
+  </script>
+
+</body>
+</html>
