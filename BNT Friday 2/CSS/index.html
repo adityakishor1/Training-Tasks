@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Units: px, em, rem, %</title>
+  <style>
+    html {
+      font-size: 16px; /* Base size for rem */
+    }
+
+    body {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .box-px {
+      font-size: 16px;
+      padding: 10px;
+      background: #d0ebff;
+    }
+
+    .parent-em {
+      font-size: 20px;
+      background: #ffe5ec;
+      padding: 10px;
+    }
+
+    .child-em {
+      font-size: 1.5em; /* 1.5 * parent’s 20px = 30px */
+      background: #ffc8dd;
+      padding: 5px;
+      margin-top: 10px;
+    }
+
+    .box-rem {
+      font-size: 2rem; /* 2 * 16px = 32px */
+      background: #e2f0cb;
+      padding: 10px;
+    }
+
+    .parent-percent {
+      width: 400px;
+      background: #f3f3f3;
+      padding: 10px;
+    }
+
+    .child-percent {
+      width: 50%; /* 50% of 400px = 200px */
+      background: #ffafcc;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Units: px, em, rem, %</h2>
+
+  <!-- PX Example -->
+  <div class="section">
+    <h3>1. PX (Pixels)</h3>
+    <div class="box-px">This font-size is 16px (fixed)</div>
+  </div>
+
+  <!-- EM Example -->
+  <div class="section">
+    <h3>2. EM (Relative to Parent Font Size)</h3>
+    <div class="parent-em">
+      Parent font-size = 20px
+      <div class="child-em">Child font-size = 1.5em = 30px</div>
+    </div>
+  </div>
+
+  <!-- REM Example -->
+  <div class="section">
+    <h3>3. REM (Relative to Root Font Size)</h3>
+    <div class="box-rem">Font-size = 2rem = 32px (16px * 2)</div>
+  </div>
+
+  <!-- Percentage Example -->
+  <div class="section">
+    <h3>4. % (Percentage of Parent)</h3>
+    <div class="parent-percent">
+      Parent width = 400px
+      <div class="child-percent">Child width = 50% of parent = 200px</div>
+    </div>
+  </div>
+
+</body>
+</html>
