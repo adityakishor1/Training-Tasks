@@ -1,215 +1,216 @@
 import React, { useState } from 'react';
 
-// 1. Counter Component
-
-
-function Counter() {
-  const [count, setCount] = useState(0);
+// 1. TapCounter
+function TapCounter() {
+  const [taps, setTaps] = useState(0);
   return (
-    <div>
-      <h3>1. Counter Component</h3>
-      <button onClick={() => setCount(count + 1)}>Increase</button>
-      <p>Count: {count}</p>
-    </div>
+    <section>
+      <h3>1. Tap Counter</h3>
+      <button onClick={() => setTaps(t => t + 1)}>Tap Here</button>
+      <p>You tapped: {taps} times</p>
+    </section>
   );
 }
 
-// 2. Toggle Text
-function ToggleText() {
-  const [text, setText] = useState(true);
+// 2. ToggleMessage
+function ToggleMessage() {
+  const [visible, setVisible] = useState(true);
   return (
-    <div>
-      <h3>2. Toggle Text</h3>
-      <button onClick={() => setText(!text)}>
-        {text ? 'Hello' : 'Welcome Back'}
+    <section>
+      <h3>2. Toggle Greeting</h3>
+      <button onClick={() => setVisible(v => !v)}>
+        {visible ? 'Hello, World!' : 'Goodbye, Friend!'}
       </button>
-    </div>
+    </section>
   );
 }
 
-// 3. Parent to Child Props
-function Child({ message }) {
-  return <p>{message}</p>;
-}
-function Parent() {
+// 3. TextDisplay
+function TextDisplay() {
   return (
-    <div>
-      <h3>3. Parent ➝ Child</h3>
-      <Child message="Good morning" />
-    </div>
+    <section>
+      <h3>3. Message Displayer</h3>
+      <Message content="Stay positive and keep learning!" />
+    </section>
   );
 }
-
-// 4. GrandParent ➝ Parent ➝ Child
-function GChild({ message }) {
-  return <p>{message}</p>;
+function Message({ content }) {
+  return <p>{content}</p>;
 }
-function GParent({ message }) {
+
+// 4. CascadeMessage
+function Sender({ data }) {
   return (
-    <div>
-      <h3>4. GrandParent ➝ Parent ➝ Child</h3>
-      <MidParent message={message} />
-    </div>
+    <section>
+      <h3>4. Message Relay</h3>
+      <Forward data={data} />
+    </section>
   );
 }
-function MidParent({ message }) {
-  return <GChild message={message} />;
+function Forward({ data }) {
+  return <Message content={data} />;
 }
 
-// 5. Render list using map
-function NameList() {
-  const names = ['John', 'Jane', 'Alex'];
+// 5. NamesViewer
+function NamesViewer() {
+  const names = ['Anita', 'Rahul', 'Zara'];
   return (
-    <div>
-      <h3>5. Render List</h3>
-      <ul>{names.map(name => <li key={name}>{name}</li>)}</ul>
-    </div>
+    <section>
+      <h3>5. Friends List</h3>
+      <ul>
+        {names.map((n, idx) => (
+          <li key={idx}>{n}</li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
-// 6. Checkbox
-function CheckboxComponent() {
+// 6. CheckboxAlert
+function CheckboxAlert() {
   const [checked, setChecked] = useState(false);
   return (
-    <div>
-      <h3>6. Checkbox</h3>
-      <input type="checkbox" onChange={e => setChecked(e.target.checked)} />
-      {checked && <p>You checked the box!</p>}
-    </div>
+    <section>
+      <h3>6. Confirmation Box</h3>
+      <label>
+        <input type="checkbox" onChange={e => setChecked(e.target.checked)} />
+        Confirm
+      </label>
+      {checked && <p>Confirmed ✅</p>}
+    </section>
   );
 }
 
-// 7. Controlled Component
-function ControlledInput() {
-  const [value, setValue] = useState('');
+// 7. RealTimeInput
+function RealTimeInput() {
+  const [text, setText] = useState('');
   return (
-    <div>
-      <h3>7. Controlled Input</h3>
-      <input value={value} onChange={e => setValue(e.target.value)} />
-      <p>You typed: {value}</p>
-    </div>
+    <section>
+      <h3>7. Live Feedback</h3>
+      <input value={text} onChange={e => setText(e.target.value)} />
+      <p>Current input: {text}</p>
+    </section>
   );
 }
 
-// 8. Reusable InputField
-function InputField({ label, placeholder, name, onChange }) {
+// 8. InputField
+function InputField({ label, name, placeholder, onUpdate }) {
   return (
-    <div>
+    <div style={{ margin: '8px 0' }}>
       <label>{label}: </label>
-      <input
-        name={name}
-        placeholder={placeholder}
-        onChange={onChange}
-      />
+      <input name={name} placeholder={placeholder} onChange={onUpdate} />
     </div>
   );
 }
 
-// 9. Login Form with Button Disabled
-function LoginForm() {
-  const [user, setUser] = useState({ username: '', password: '' });
-  const handleChange = e => {
-    setUser({ ...user, [e.target.name]: e.target.value });
+// 9. LoginBox
+function LoginBox() {
+  const [credentials, setCredentials] = useState({ username: '', password: '' });
+
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setCredentials(prev => ({ ...prev, [name]: value }));
   };
+
+  const canLogin = credentials.username && credentials.password;
+
   return (
-    <div>
-      <h3>9. Login Form</h3>
-      <InputField
-        label="Username"
-        name="username"
-        placeholder="Enter username"
-        onChange={handleChange}
-      />
-      <InputField
-        label="Password"
-        name="password"
-        placeholder="Enter password"
-        onChange={handleChange}
-      />
-      <button disabled={!user.username || !user.password}>Submit</button>
-    </div>
+    <section>
+      <h3>9. Secure Login</h3>
+      <InputField label="Username" name="username" placeholder="Enter ID" onUpdate={handleInput} />
+      <InputField label="Password" name="password" placeholder="Enter Secret" onUpdate={handleInput} />
+      <button disabled={!canLogin}>Login</button>
+    </section>
   );
 }
 
-// 10. List with Delete
-function DeleteList() {
-  const [items, setItems] = useState(['Item 1', 'Item 2', 'Item 3']);
-  const handleDelete = index => {
-    const newList = [...items];
-    newList.splice(index, 1);
-    setItems(newList);
+// 10. ModifiableList
+function ModifiableList() {
+  const [items, setItems] = useState(['Sun', 'Moon', 'Stars']);
+
+  const deleteItem = index => {
+    setItems(prev => prev.filter((_, idx) => idx !== index));
   };
+
   return (
-    <div>
-      <h3>10. List with Delete</h3>
+    <section>
+      <h3>10. Editable List</h3>
       <ul>
-        {items.map((item, i) => (
-          <li key={i}>
-            {item} <button onClick={() => handleDelete(i)}>Delete</button>
+        {items.map((item, idx) => (
+          <li key={idx}>
+            {item} <button onClick={() => deleteItem(idx)}>Delete</button>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 
-// 11. Todo App
-function TodoApp() {
-  const [todos, setTodos] = useState([]);
-  const [task, setTask] = useState('');
-  const handleAdd = () => {
-    if (task) setTodos([...todos, task]);
-    setTask('');
+// 11. ToDoManager
+function ToDoManager() {
+  const [tasks, setTasks] = useState([]);
+  const [taskInput, setTaskInput] = useState('');
+
+  const addNewTask = () => {
+    if (taskInput.trim()) {
+      setTasks(prev => [...prev, taskInput.trim()]);
+      setTaskInput('');
+    }
   };
-  const handleDelete = index => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
+
+  const removeTask = index => {
+    setTasks(prev => prev.filter((_, i) => i !== index));
   };
+
   return (
-    <div>
-      <h3>11. Todo App</h3>
-      <input value={task} onChange={e => setTask(e.target.value)} />
-      <button onClick={handleAdd}>Add</button>
+    <section>
+      <h3>11. To-Do List</h3>
+      <input value={taskInput} onChange={e => setTaskInput(e.target.value)} />
+      <button onClick={addNewTask}>Add</button>
       <ul>
-        {todos.map((todo, i) => (
-          <li key={i}>
-            {todo} <button onClick={() => handleDelete(i)}>Delete</button>
+        {tasks.map((task, idx) => (
+          <li key={idx}>
+            {task} <button onClick={() => removeTask(idx)}>X</button>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }
 
-// 12. Counter Reset at 10
-function SmartCounter() {
-  const [count, setCount] = useState(0);
-  const handleClick = () => setCount(prev => (prev >= 10 ? 0 : prev + 1));
+// 12. LoopCounter
+function LoopCounter() {
+  const [num, setNum] = useState(0);
+
+  const update = () => {
+    setNum(prev => (prev >= 10 ? 0 : prev + 1));
+  };
+
   return (
-    <div>
-      <h3>12. Smart Counter</h3>
-      <button onClick={handleClick}>Count: {count}</button>
-    </div>
+    <section>
+      <h3>12. Loop Counter</h3>
+      <button onClick={update}>Current: {num}</button>
+    </section>
   );
 }
 
-function App() {
+// Main App Wrapper
+function UpdatedInterface() {
   return (
-    <div style={{ padding: '20px' }}>
-      <Counter />
-      <ToggleText />
-      <Parent />
-      <GParent message="Hello from GrandParent" />
-      <NameList />
-      <CheckboxComponent />
-      <ControlledInput />
-      <LoginForm />
-      <DeleteList />
-      <TodoApp />
-      <SmartCounter />
-    </div>
+    <main style={{ padding: '20px' }}>
+      <TapCounter />
+      <ToggleMessage />
+      <TextDisplay />
+      <Sender data="Message sent from sender component!" />
+      <NamesViewer />
+      <CheckboxAlert />
+      <RealTimeInput />
+      <LoginBox />
+      <ModifiableList />
+      <ToDoManager />
+      <LoopCounter />
+    </main>
   );
 }
 
-export default App;
+export default UpdatedInterface;
