@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "1st post",
+      "datetime": "June 28, 2025 8:34:23 PM",
+      "body": "My 1st post "
+    },
+    {
+      "id": "2",
+      "title": "2nd Post",
+      "datetime": "July 03, 2025 12:07:09 PM",
+      "body": "My 2nd Post"
+    },
+    {
+      "id": "3",
+      "title": "3rd Post",
+      "datetime": "July 03, 2025 3:56:09 PM",
+      "body": "3rd Post has updated"
+    }
+  ]
+}
