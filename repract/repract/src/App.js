@@ -6,7 +6,7 @@ import Interest from './pages/Interest';
 import Setting from './pages/Setting';
 import PasswordCheck from './components/PasswordCheck';
 import TextTransformer from './components/TextTransformer';
-import TrafficLight from './components/TrafficLight'; // ✅ Import
+import TrafficLight from './components/TrafficLight'; 
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/interest" element={<Interest />} />
           <Route path="/setting" element={<Setting />} />
-          <Route path="/traffic" element={<TrafficLight />} /> {/* ✅ fixed path */}
+          <Route path="/traffic" element={<TrafficLight />} /> 
         </Routes>
       </div>
     </Router>
