@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ClassCasting",
+            "request": "launch",
+            "mainClass": "ClassCasting",
+            "projectName": "Training daily task_86a36198"
+        },
+        {
+            "type": "java",
+            "name": "Demo",
+            "request": "launch",
+            "mainClass": "Demo",
+            "projectName": "Training daily task_86a36198"
+        },
+        {
+            "type": "java",
+            "name": "ExceptionExample",
+            "request": "launch",
+            "mainClass": "ExceptionExample",
+            "projectName": "Training daily task_86a36198"
+        },
+        {
+            "type": "java",
+            "name": "LargestInArray",
+            "request": "launch",
+            "mainClass": "LargestInArray",
+            "projectName": "Training daily task_86a36198"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Training daily task_86a36198"
+        }
+    ]
+}
