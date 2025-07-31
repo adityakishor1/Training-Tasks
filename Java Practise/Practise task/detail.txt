@@ -5,12 +5,12 @@
 
 3. Inheritance lets one class (child) inherit properties/methods from another class (parent).
 
-Types:
-Single
-Multilevel
-Hierarchical
-Multiple (via interfaces)
-Hybrid
+       Types:
+              Single
+              Multilevel
+              Hierarchical
+              Multiple (via interfaces)
+              Hybrid
 
 ✅ 6. Difference Between Abstract Class and Interface
 Feature   	      Abstract Class	                Interface
