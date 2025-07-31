@@ -1,5 +1,3 @@
-package com.example.javaBasics;
-
 import java.io.*;
 
 public class StreamTypes {

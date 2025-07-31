@@ -11,7 +11,7 @@ class B extends A {
         System.out.println("Subclass constructor");
     }
 }
-public class Consto {
+public class Constu {
     public static void main(String[] args) {
         B obj = new B();
     }
