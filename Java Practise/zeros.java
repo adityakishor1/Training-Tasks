@@ -15,6 +15,7 @@ public class zeros {
                 arr[index--] = arr[i];
             }
         }
+        
         while (index >= 0) {
             arr[index--] = 0;
         }
