@@ -7,12 +7,12 @@ class Product {
 
     // Default constructor
     Product() {
-        this("Unknown", 100.0, 1); // calling parameterized constructor
+        this("Unknown", 100.0, 1);
     }
 
     // Constructor with 1 parameter
     Product(String name) {
-        this(name, 200.0, 1); // default price & quantity
+        this(name, 200.0, 1); 
     }
 
     // Constructor with 2 parameters

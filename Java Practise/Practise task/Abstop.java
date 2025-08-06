@@ -11,7 +11,7 @@ class Dog extends Animal {
     }
 }
 
-public class Abst {
+public class Abstop {
     public static void main(String[] args) {
         Animal a = new Dog();
         a.sound();
