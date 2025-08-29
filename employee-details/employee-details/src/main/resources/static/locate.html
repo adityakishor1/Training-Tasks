@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Employee</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        .container { max-width: 500px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        input { width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        #results { margin-top: 20px; padding: 10px; border: 1px solid #eee; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Fetch Employee Details</h2>
+    <form id="employeeForm">
+        <label for="employeeId">Enter Employee ID:</label>
+        <input type="text" id="employeeId" name="employeeId" placeholder="e.g., E101" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="results">
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="FetchEmployeeDetails.js"></script>
+
+</body>
+</html>
